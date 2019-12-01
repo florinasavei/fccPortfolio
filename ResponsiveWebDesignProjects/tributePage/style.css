@@ -1,0 +1,38 @@
+#main{
+    width: 100vw;
+}
+
+#img-div{
+    background: rgb(221, 226, 241);
+    flex: 1;
+}
+
+p#tribute-info{
+    flex: 1;
+}
+
+#image{
+    display: block;
+    width: 30%;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px dotted rgb(114, 80, 39);
+    border-radius: 100%;
+}
+
+#img-caption{
+    margin: 0 auto;
+    width: 30%;
+    text-align: center;
+    background-color: salmon;
+}
+
+section{
+    display: flex;
+}
+
+@media only screen and (max-width: 500px) {
+    section{
+       flex-direction: column;
+    }
+  }
