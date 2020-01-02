@@ -1,19 +1,40 @@
-#main{
+body, #main{
     width: 100vw;
+    height: 100vh;
+    max-width: 100vw;
+    max-height:100vh;
+    min-width: 100vw;
+    min-height:100vh;
+    overflow: hidden;
+    background-color: #f5e8e8;
 }
 
-#img-div{
-    background: rgb(221, 226, 241);
+#main{
+    padding: 0 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#title{
+    margin-top: 30px;
+}
+
+#bio{
+    border-bottom: 2px double gray;
+}
+
+#bio #img-div{
     flex: 1;
 }
 
-p#tribute-info{
-    flex: 1;
+#bio p#tribute-info{
+    flex: 3;
 }
 
-#image{
+#bio #image{
     display: block;
-    width: 30%;
+    width: 50%;
     max-width: 100%;
     margin: 0 auto;
     border: 1px dotted rgb(114, 80, 39);
