@@ -15,6 +15,7 @@ body,
     flex-direction: column;
     align-items: center;
     font-family: 'Roboto', sans-serif;
+    justify-content: space-between;
 }
 
 #title {
@@ -60,6 +61,14 @@ section {
     width: 70vw;
 }
 
+#books>ul>li{
+    list-style-type: none;
+    padding: 5px 0;
+}
+#books>ul>li:before{
+    content: '📖 ';
+}
+
 #books,
 #socialLinks {
     justify-content: space-between;
@@ -100,4 +109,15 @@ a>cite.hint{
 
 a:hover>cite.hint{
     display: inline;
+}
+
+footer{
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    border-top: 3px double gray;
+    padding-bottom: 30px;
+    font-family: 'Montserrat', sans-serif;
 }
