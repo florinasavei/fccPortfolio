@@ -93,3 +93,11 @@ section {
         flex-direction: column;
     }
 }
+
+a>cite.hint{
+    display: none;
+}
+
+a:hover>cite.hint{
+    display: inline;
+}
