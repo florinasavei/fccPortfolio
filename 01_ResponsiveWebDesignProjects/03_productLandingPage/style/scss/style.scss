@@ -1,0 +1,10 @@
+@media only screen and (max-width: 600px) {
+    #header-img {
+      border-radius: 6px;
+    }
+  }
+
+  article{
+      display: flex;
+      flex-direction: column;
+  }
