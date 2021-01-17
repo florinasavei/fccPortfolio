@@ -1,0 +1,9 @@
+<p>week-calendar works!</p>
+
+<button (onclick)="generateWeeks(2053)">Generate</button>
+
+<ul>
+    <li *ngFor="let year of generatedWeeks">
+        {{year}}
+    </li>
+</ul>
