@@ -1,9 +1,16 @@
-<p>week-calendar works!</p>
+<!-- <p>week-calendar works!</p>
 
-<button (onclick)="generateWeeks(2053)">Generate</button>
+<button (onclick)="generateWeeks(2054)">Generate</button> -->
 
-<ul>
-    <li *ngFor="let year of generatedWeeks">
-        {{year}}
-    </li>
-</ul>
+<div>
+    <ul class="calanedar-container">
+        <li *ngFor="let year of generatedWeeks.years" class="year">
+            <p class="year-number">{{year.year}}</p>
+            <ul class="weeks-in-year">
+                <li *ngFor="let week of year.weeks" class="week">
+                    <p class="week-number">{{week.weekNumber}}</p>
+                </li>
+            </ul>
+        </li>
+    </ul>    
+</div>

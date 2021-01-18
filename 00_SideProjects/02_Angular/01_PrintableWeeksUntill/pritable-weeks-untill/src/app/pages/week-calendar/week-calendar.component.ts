@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Calendar, Week, Year } from './calendar.model';
 
 @Component({
   selector: 'app-week-calendar',
@@ -7,25 +8,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class WeekCalendarComponent implements OnInit {
 
-  generatedWeeks: number[][] = [];
+  generatedWeeks: Calendar = new Calendar();
 
   generateWeeks(yearUntill: number) {
     let currentYear = new Date().getFullYear();
-    for (let i = currentYear; i <= yearUntill; i++) {
-      this.generatedWeeks[i] = [];
+    for (let y = currentYear; y <= yearUntill; y++) {
+      let year = new Year(y);
       for (let j = 1; j <= 52; j++) {
-        this.generatedWeeks[i][j] = j;
+        let week = new Week(j);
+        year.weeks.push(week);
       }
+      this.generatedWeeks.years.push(year)
     }
     console.log(this.generatedWeeks);
   }
 
   constructor() {
-    this.generateWeeks(2053);
+    this.generateWeeks(2054);
   }
 
   ngOnInit(): void {
-    this.generateWeeks(2053);
   }
 
 }

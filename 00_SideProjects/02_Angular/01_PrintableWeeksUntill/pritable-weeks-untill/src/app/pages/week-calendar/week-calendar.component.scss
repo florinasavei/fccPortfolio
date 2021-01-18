@@ -1,0 +1,65 @@
+.calanedar-container {
+  list-style-type: none !important;
+  margin: 0;
+  padding: 0;
+  width: 351px;
+  height: 357px;
+  border: 0.5px dotted black;
+  padding: 3px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  justify-items: center;
+  align-items: center;
+
+  .year {
+    display: flex;
+    max-width: 0 auto;
+
+    .year-number {
+      display: none;
+      font-size: 2px;
+    }
+
+    &:nth-of-type(17n+0) {
+        //background-color: red;
+        margin-bottom: 10px;
+      }    
+
+  }
+
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none !important;
+
+    li {
+      margin: 0;
+      padding: 0;
+
+    }
+  }
+
+  .weeks-in-year {
+    display: flex;
+    flex-direction: row;
+
+
+
+    .week {
+      border: 0.2px solid black;
+      width: 2px;
+      margin: 0 1px;
+      height: 2px;
+      font-size: 4px;
+      border-radius: 100%;
+
+      .week-number {
+        display: none;
+        font-size: 2px;
+      }
+    }
+  }
+}
