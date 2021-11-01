@@ -4,8 +4,8 @@
   padding: 0;
   width: 351px;
   height: 357px;
-  border: 0.5px dotted black;
-  padding: 3px;
+  border: 0.5px dotted transparent;
+  padding: 0;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -16,10 +16,12 @@
   .year {
     display: flex;
     max-width: 0 auto;
+    padding: 0;
+    margin: 0;
 
     .year-number {
       display: none;
-      font-size: 2px;
+      font-size: 1px;
     }
 
     &:nth-of-type(17n+0) {
@@ -45,20 +47,26 @@
   .weeks-in-year {
     display: flex;
     flex-direction: row;
-
-
+    margin: 0;
+    padding: 0;
 
     .week {
-      border: 0.2px solid black;
-      width: 2px;
-      margin: 0 1px;
-      height: 2px;
+      // &:first-of-type{
+        border-left: 0.2px solid transparent;
+      // }
+      border-right: 0.2px solid transparent;
+      width: 4.5px;
+      height: 4px;
       font-size: 4px;
       border-radius: 100%;
+      margin: 0;
+      padding: 0;
+      margin-right:0.5px;
 
       .week-number {
-        display: none;
-        font-size: 2px;
+        display: inline;
+        font-size: 4px;
+        padding: 0;
       }
     }
   }
